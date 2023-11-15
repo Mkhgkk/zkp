@@ -1,0 +1,19 @@
+def isEmployee(field id) -> bool {
+    u32 NUM_OF_EMPLOYEES = 5;
+    field[NUM_OF_EMPLOYEES] EMPLOYEE_IDS = [67988, 70980, 23496, 69889, 90804];
+    field mut found = 0;
+
+    for u32 i in 0..NUM_OF_EMPLOYEES {
+        found = if EMPLOYEE_IDS[i] == id { 1 } else { 0 };
+    }
+
+    return found == 1;
+}
+
+def main(private field id) {
+    assert(isEmployee(id));
+    return;
+}
+
+
+
